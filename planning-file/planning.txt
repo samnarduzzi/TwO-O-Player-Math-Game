@@ -1,7 +1,7 @@
 Task 1: Extract Nouns for Classes
 Player
 Game
-question
+Question
 
 Task 2: Write their roles
 Player:
@@ -10,15 +10,16 @@ The Player class will represent the players in the game. Each player will have a
 Game:
 The Game class will represent the game logic. It will have methods to generate a new question, check the player's answer, update the player's score and lives, and determine the winner.
 
+Question:
+The Question class will generate and hold information for a single math addition question, including the numbers that make up the question and the correct answer.
+
 Task 3: Write down the methods for each class
 Player:
-
 - initialize(name): creates a new player instance with a given name, score and lives
 - update_score: updates the player's score based on whether the answer is correct or incorrect
 - update_lives: updates the player's lives based on whether the answer is correct or incorrect
 
 Game:
-
 - initialize(player1, player2): creates a new game instance with two player instances
 - generate_question: generates a new addition question
 - check_answer: checks if the player's answer is correct or not
@@ -28,6 +29,10 @@ Game:
 - display_score: displays the current score of each player
 - winner: determines who the winner is
 
+Question:
+- initialize(num1, num2): generates two random numbers between 1 and 20, and setting them as instance variables.
+- generate_question: generates a string of the question (ex. "What is 8 + 2?").
+- check_answer: takes the user's answer as an argument, and returns true if the answer is correct, and false if it is not.
 
 - Which class will contain the game loop (where each instance of the loop is the other players turn)?
 
@@ -37,6 +42,6 @@ The Game class will contain the game loop where each instance of the loop is the
 
 The Game class should manage who the current_player is.
 
--Which class(es) will contain user I/O and which will not have any?
+- Which class(es) will contain user I/O and which will not have any?
 
-The Player class will not contain any user I/O, but the Game class will.
+The Player and Question class will not contain any user I/O, but the Game class will.
